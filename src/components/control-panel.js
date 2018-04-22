@@ -43,7 +43,7 @@ export default class StyleControls extends PureComponent {
         background: true
       },
       color: {
-        water: '#DBE2E6',
+        water: '#8198a8',
         parks: '#E6EAE9',
         buildings: '#c0c0c8',
         roads: '#ffffff',
@@ -60,6 +60,7 @@ export default class StyleControls extends PureComponent {
   _onColorChange(name, event) {
     const color = {...this.state.color, [name]: event.target.value};
     this.setState({color});
+    // console.log(color);
     this._updateMapStyle({...this.state, color});
   }
 
